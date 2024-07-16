@@ -1,0 +1,14 @@
+package creationaldesignpattern.factorypattern;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Factory factory1 = new ToyataFactory();
+		Toyata toyata = (Toyata) factory1.manufactureCar();
+
+		
+	}
+
+}

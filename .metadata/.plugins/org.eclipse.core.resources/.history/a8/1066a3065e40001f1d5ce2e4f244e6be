@@ -1,0 +1,61 @@
+package com.demo.controller;
+
+import java.io.IOException;
+
+import com.demo.model.UserPojo;
+import com.demo.service.LoginService;
+import com.demo.service.LoginServiceImpl;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class LoginController extends HttpServlet{
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		String user =  request.getParameter("user");
+		String password=  request.getParameter("pass");
+		
+		UserPojo userPojo = new UserPojo(user, password);
+		
+		LoginService loginService =  new LoginServiceImpl();
+		
+		boolean result = loginService.validate(userPojo);
+		
+		if(result == true) {
+			//login success and forward to jsp page
+			
+			//to forward to a JSP we will use RequestDispatcher 
+			
+			RequestDispatcher r1 =  request.getRequestDispatcher("LoginSuccess.jsp");
+			r1.forward(request, response);
+			
+			//do not write login success in the controller
+		}else {
+			//login fail and forward to jsp page
+			
+		
+			RequestDispatcher r1 =  request.getRequestDispatcher("LoginFailed.jsp");
+			r1.forward(request, response);
+
+			//do not write login fail in the controller
+			
+		}
+		
+		
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.doPost(request, response);
+	}
+	
+	
+
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	
+	
+	<!-- here we configure our bean  -->
+	
+	<bean id= "stud" class="mybean.Student"> 
+	
+	<!-- We have use constructor method to  -->
+	
+	<constructor-arg name="studentId" value="103"></constructor-arg>
+	<constructor-arg name="studentName" value="AVA"></constructor-arg>
+	<constructor-arg name="marks" value="80"></constructor-arg>
+	
+	</bean>
+	
+	<!-- We have use Setter method to  -->
+	<bean id="Student" class="mybean.Student">
+	<property name="studentId" value="104"></property>
+	<property name="studentName" value="Aarohi"></property>
+	<property name="marks" value="95"></property>
+	
+	</bean>
+	
+	
+	<bean id="address" class="mybean.Address">
+	
+	<constructor-arg name= "addId" value="501"></constructor-arg>
+	<constructor-arg name= "addCity" value="Mumbai"></constructor-arg>
+	<constructor-arg name= "addState" value="Maharashtra"></constructor-arg>
+	
+	</bean>
+	
+	<bean id="emp" class="mybean.Employee">
+
+	<property name="empId" value="101"></property>
+	<property name="empId" value="101"></property>
+	<property name="empId" value="101"></property>
+	
+	</bean>
+	
+
+</beans>

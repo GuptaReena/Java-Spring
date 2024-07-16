@@ -1,0 +1,5 @@
+package Structuraldesignpattern.Adapterpattern;
+
+public class Printer {
+
+}

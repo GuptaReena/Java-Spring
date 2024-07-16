@@ -1,0 +1,57 @@
+package mybean;
+
+public class Student {
+
+	private int studentId;
+	private String studentName;
+	private String marks;
+	
+	
+	
+
+	public Student(int studentId, String studentName, String marks) {
+		super();
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.marks = marks;
+	}
+
+
+	public int getStudentId() {
+		return studentId;
+	}
+
+
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+
+
+	public String getStudentName() {
+		return studentName;
+	}
+
+
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+
+
+	public String getMarks() {
+		return marks;
+	}
+
+
+	public void setMarks(String marks) {
+		this.marks = marks;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", marks=" + marks + "]";
+	}
+	
+	
+	
+}

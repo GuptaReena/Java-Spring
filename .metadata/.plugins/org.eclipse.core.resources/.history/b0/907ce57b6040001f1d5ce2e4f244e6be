@@ -1,0 +1,64 @@
+package com.demo.controller;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+import com.demo.model.UserPojo;
+import com.demo.service.LoginService;
+import com.demo.service.LoginServiceImpl;
+
+
+public class LoginController extends HttpServlet {
+	
+	
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String userName = request.getParameter("user");
+		String password = request.getParameter("pass");
+		
+		UserPojo userPojo = new UserPojo(userName,password);
+		
+		LoginService loginService =  new LoginServiceImpl();
+		
+		boolean result = loginService.validate(userPojo);
+		
+		if(result == true) {
+			
+			//login Success forward to the jsp page
+			//Do not write login success in the servlet PrintWriter
+			//To forward to a jsp page we use  RequestDispatcher
+
+			RequestDispatcher r1 =  request.getRequestDispatcher("LoginSuccess.jsp");
+			
+			r1.forward(request, response);
+			
+			
+			
+		}else {
+			
+			//login Success forward to the jsp page
+			//Do not write login Fail in the servlet PrintWriter
+			//To forward to a jsp page we use  RequestDispatcher
+			
+			RequestDispatcher r1 =  request.getRequestDispatcher("LoginSuccess.jsp");
+			
+			r1.forward(request, response);
+		}
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

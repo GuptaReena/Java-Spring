@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ADD</title>
+</head>
+<body>
+
+	<form action="AddServlet" method="get">
+		
+		<h2>Add to Numbers</h2>
+		<p>Number 1: <input type="text" value="num1" placeholder="Enter First Number"></p>
+		<p>Number 2: <input type="text" value="num2" placeholder="Enter Second Number"></p>
+		
+		<p><button value="submit">ADD</button> <p><button value="reset">Clear</button></p></p>
+		
+	</form>
+
+
+</body>
+</html>

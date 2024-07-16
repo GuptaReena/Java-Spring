@@ -1,0 +1,20 @@
+package creationaldesignpattern.singletonpattern;
+
+public class Translator {
+
+	public String translate(String message) {
+		
+		
+		if(message.equalsIgnoreCase("Good Morning")) {
+			System.out.println("It is Morning");
+		}else if(message.equalsIgnoreCase("Good Afternoon")) {
+			System.out.println("It is Afternoon");
+		}else if(message.equalsIgnoreCase("Good Evening") {
+			System.out.println("It is Evening or night");
+		}
+		
+		
+	}
+	
+	
+}

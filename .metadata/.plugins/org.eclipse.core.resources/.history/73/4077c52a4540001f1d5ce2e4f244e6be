@@ -1,0 +1,7 @@
+package com.demo.model;
+
+public class UserPojo {
+	
+	boolean Validate(UserPojo userPojo)
+
+}

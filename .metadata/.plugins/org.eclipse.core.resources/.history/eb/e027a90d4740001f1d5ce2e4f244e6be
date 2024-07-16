@@ -1,0 +1,16 @@
+package com.demo.service;
+
+import com.demo.dao.LoginDao;
+import com.demo.model.UserPojo;
+
+public class LoginServiceImpl implements LoginService {
+
+	LoginDao loginDao;
+	
+	@Override
+	public boolean Validate(UserPojo userPojo) {
+		
+		return loginDao.Validate(userPojo);
+	}
+
+}

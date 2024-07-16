@@ -1,0 +1,25 @@
+package creationaldesignpattern.singletonpattern;
+
+public class TranslatorEarly {
+	
+	// step 1: Create a constructor and make it private
+	private TranslatorEarly() {};
+	
+public String translate(String message) {
+		
+		System.out.println("Object " + (++counter));
+		
+		String output = "It dont understand the word!";
+		
+		if(message.equalsIgnoreCase("Good Morning")) {
+			System.out.println("It is Morning");
+		}else if(message.equalsIgnoreCase("Good Afternoon")) {
+			System.out.println("It is Afternoon");
+		}else if(message.equalsIgnoreCase("Good Evening")) {
+			System.out.println("It is Evening or night");
+		}
+		
+		return output;
+	}
+
+}

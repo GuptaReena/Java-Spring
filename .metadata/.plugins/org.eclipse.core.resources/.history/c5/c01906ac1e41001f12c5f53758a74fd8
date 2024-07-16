@@ -1,0 +1,24 @@
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import mybean.Student;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Student stud =  new Student(101,"Reena",90);
+		
+		System.out.println(stud);
+			
+		
+		ApplicationContext context =  new ClassPathXmlApplicationContext("anyName.xml");
+		
+		Student stud1 = context.getBean("stud", Student.class);
+		System.out.println(stud1.getStudentId(),stud1.getStudentName(),stud1.getMarks());
+			
+	}
+
+}

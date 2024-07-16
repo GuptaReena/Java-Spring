@@ -1,0 +1,16 @@
+package creationaldesignpattern.Builderpattern;
+
+public class Demo {
+
+	public static void main(String args[]) {
+		
+		Employee1 emp1 =  new Employee1();
+		emp1.setEmpId(101);
+		emp1.setEmpName("Jhon");
+		emp1.setEmpAddress("US");
+		
+		
+	}
+	
+	
+}

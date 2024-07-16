@@ -1,0 +1,5 @@
+package creationaldesignpattern.factorypattern;
+
+public class Factory {
+
+}

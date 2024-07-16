@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="com.demo.dao.LoginDao"/>
+    <fullyQualifiedTypeName name="com.demo.dao.LoginDaoImpl"/>
+    <fullyQualifiedTypeName name="com.demo.service.LoginServiceImpl"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="com.demo.model.UserPojo"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="creationaldesignpattern.singletonpattern.TranslatorEarly"/>
+    <fullyQualifiedTypeName name="creationaldesignpattern.Builderpattern.Employee3.Builder"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.ClassPathBeanDefinitionScanner"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="mybean.Student"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+    <fullyQualifiedTypeName name="config.AppConfig"/>
+    <fullyQualifiedTypeName name="mybean.Address"/>
+    <fullyQualifiedTypeName name="mybean.Employee"/>
+</qualifiedTypeNameHistroy>

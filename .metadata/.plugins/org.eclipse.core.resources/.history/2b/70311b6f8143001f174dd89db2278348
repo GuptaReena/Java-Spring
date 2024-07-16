@@ -1,0 +1,17 @@
+package config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import mybean.Student;
+
+@Configuration
+public class AppConfig {
+	
+	@Bean(name ="Student")
+	public Student student() {
+		
+		return new Student(508,"Taato",80);
+	}
+
+}

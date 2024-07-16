@@ -1,0 +1,18 @@
+package Structuraldesignpattern.Adapterpattern;
+
+public class PrinterAdapter implements Printer {
+
+	LegacyPrinter oldPrinter;
+	
+	
+	
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		
+		
+		
+	}
+
+	
+}

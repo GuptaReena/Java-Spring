@@ -1,0 +1,9 @@
+package creationaldesignpattern.Builderpattern;
+
+public class Employee3 {
+
+	int empId;
+	String empName;
+	String empAddress;
+	
+}

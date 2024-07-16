@@ -1,0 +1,13 @@
+import mybean.Student;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Student student =  new Student(507,"Ajay",40);
+		System.out.println(student);
+		
+	}
+
+}

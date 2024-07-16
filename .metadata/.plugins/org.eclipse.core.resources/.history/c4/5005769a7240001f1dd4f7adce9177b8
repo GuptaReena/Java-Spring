@@ -1,0 +1,5 @@
+package creationaldesignpattern.singletonpattern;
+
+public class Translator {
+
+}

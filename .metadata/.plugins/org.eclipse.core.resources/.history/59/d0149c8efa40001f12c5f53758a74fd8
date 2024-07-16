@@ -1,0 +1,52 @@
+package creationaldesignpattern.Builderpattern;
+
+public class Employee3 {
+
+	int empId;
+	String empName;
+	String empAddress;
+	
+
+	public Employee3(Builder builder) {
+		
+		this.empId = builder.id;
+		this.empName = builder.name;
+		this.empAddress = builder.address;
+	}
+
+
+	//Builder class
+	public static class Builder{
+		
+		private int id;
+		private String name;
+		private String address;
+		
+	}
+
+	public Builder setEmpId(int empId) {
+		this.empId = empId;
+		return this;
+	}
+	
+	public Builder setEmpName(String empName) {
+		this.empName = empName;
+		return this;
+	}
+	
+	public Builder setEmpAddress(String empAddress) {
+		this.empAddress = empAddress;
+		return this;
+	}
+	
+	
+	public Employee3 build() {
+		
+		return new Employee3(this);
+	}
+
+	
+	
+	
+	
+}

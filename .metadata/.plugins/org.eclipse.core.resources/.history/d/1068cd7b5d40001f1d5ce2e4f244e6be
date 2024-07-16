@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
+
+	<form action="LoginController" method="post">
+		
+		<div>
+			<h2>Login Form</h2>
+		</div>
+		
+		<div>
+			User Name : <input type="text" name="user" placeholder="Enter UserName">
+		</div>
+		<div>
+			Password :<input type="password" name="pass" placeholder="Enter Password">
+		</div>
+		
+		<div>
+			<button value = "login"> Login</button>
+			<button value = "reset"> Forget Password</button>
+		</div>
+		
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+package creationaldesignpattern.Builderpattern;
+
+public class Demo {
+
+	public static void main(String args[]) {
+		
+		Employee1 emp1 =  new Employee1();
+		emp1.setEmpId(101);
+		emp1.setEmpName("Jhon");
+		emp1.setEmpAddress("US");
+		
+		System.out.println(emp1);
+		
+		
+		//we can also create an employee object with method chaining design pattern
+		//method chaining design pattern does not work efficiently with concurrent cases
+		// so we can go for Builder pattern
+		
+		
+		
+	}
+	
+	
+}
