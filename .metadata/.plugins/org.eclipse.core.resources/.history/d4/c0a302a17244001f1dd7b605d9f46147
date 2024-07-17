@@ -1,0 +1,51 @@
+package oops;
+
+
+ interface Vehicle{
+	
+	 void start();
+	 void stop();
+	 String getType();
+}
+
+ class Car implements Vehicle{
+	 
+	 private String brand;
+	 private String model;
+	 
+	 
+
+	@Override
+	public void start() {
+		System.out.println("Car Start using keys");
+		
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("Car stop using break");
+		
+	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	void displayDetails() {
+		System.out.println("");
+	}
+	 
+ }
+
+
+
+public class InterfaceExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

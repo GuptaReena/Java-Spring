@@ -1,0 +1,24 @@
+package oops;
+
+
+class AreaCalculator{
+	
+	public static double calculateArea(int r) {
+		
+		double area = 3.14*r*r;
+		
+		return area;
+	}
+	
+}
+
+
+
+public class Print {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

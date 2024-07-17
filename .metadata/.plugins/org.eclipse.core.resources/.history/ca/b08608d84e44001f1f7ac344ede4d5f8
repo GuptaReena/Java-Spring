@@ -1,0 +1,28 @@
+package oops;
+
+
+class Bank{
+	
+	double getIntrest() {
+		return 3.5;
+	}
+	
+}
+
+class BankA extends Bank{
+	
+	
+	
+}
+
+
+
+
+public class BankMain {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

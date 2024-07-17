@@ -1,0 +1,62 @@
+package oops;
+
+
+class Bank{
+	
+	double getIntrestRate() {
+		return 3.5;
+	}
+	
+}
+
+class BankA extends Bank{
+
+	@Override
+	double getIntrestRate() {
+		// TODO Auto-generated method stub
+		return 3.45;
+	}
+
+	
+	
+}
+
+
+class BankB extends Bank{
+	
+	@Override
+	double getIntrestRate() {
+		// TODO Auto-generated method stub
+		return 5.0;
+	}
+
+	
+}
+
+class BankC extends Bank{
+	
+	@Override
+	double getIntrestRate() {
+		// TODO Auto-generated method stub
+		return 8.0;
+	}
+
+	
+}
+
+public class BankMain {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		BankA banka = new BankA();
+		BankB bankb = new BankB();
+		BankC bankc = new BankC();
+		
+		System.out.println("Bank A Intrest Rate " +  banka.getIntrestRate());
+		System.out.println("Bank B Intrest Rate " +  bankb.getIntrestRate());
+		System.out.println("Bank C Intrest Rate " +  bankc.getIntrestRate());
+	}
+
+}

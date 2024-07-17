@@ -1,0 +1,38 @@
+package oops;
+	
+	class AreaCalculator{
+		
+		public static double calculateArea(double r) {
+			
+			return Math.PI*r*r;
+		}
+		
+			double calculateArea(int l , int b) {
+			
+			
+			
+			return l*b;
+		}
+		
+			double calculateArea(double b, double h) {
+			
+			return 0.5*b*h;
+		}
+		
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		AreaCalculator area = new AreaCalculator();
+		
+		System.out.println("Area of a Circle :" + area.calculateArea(5.0));
+		
+		System.out.println("Area of Rectangle :" + area.calculateArea(10, 10));
+		
+		System.out.println("Area of Triangle :" + area.calculateArea(5, 20));
+		
+		
+	}
+
+}

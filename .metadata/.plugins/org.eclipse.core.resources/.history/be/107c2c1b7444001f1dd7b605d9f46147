@@ -1,0 +1,94 @@
+package oops;
+
+
+ interface Vehicle{
+	
+	 void start();
+	 void stop();
+	 String getType();
+}
+
+ class Car implements Vehicle{
+	 
+	 private String brand;
+	 private String model;
+	 
+	 
+
+	@Override
+	public void start() {
+		System.out.println("Car Start using keys");
+		
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("Car stop using break");
+		
+	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	void displayDetails() {
+		System.out.println("Cars Brand : " + brand);
+		System.out.println("Card Model : " + model);
+	}
+	 
+ }
+
+ class Bicycle implements Vehicle{
+		
+		int gearCount;
+
+		@Override
+		public void start() {
+			System.out.println("Bicycle run using pedals");
+			
+		}
+
+		@Override
+		public void stop() {
+			System.out.println("Bicycle stop by break");
+			
+		}
+
+		@Override
+		public String getType() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		void displayDetails() {
+			System.out.println("Bicycle Count : " + gearCount);
+		}
+	}
+
+
+
+public class InterfaceExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Car car = new Car();
+		car.start();
+		car.stop();
+		car.displayDetails();
+		
+		Bicycle bicycle = new Bicycle();
+		bicycle.gearCount = 15;
+		bicycle.start();
+		bicycle.stop();
+		bicycle.displayDetails();
+		
+		
+		
+		
+	}
+
+}
+

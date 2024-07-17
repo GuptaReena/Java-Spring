@@ -7,9 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class Employee {
 	
-	@Value("504")
+//	Field Injection	
+//	@Value("504")
 	private int empId;
-	@Value("Sritika")
+//	@Value("Sritika")
 	private String empName;
 	private Address empAdd;
 	
@@ -17,8 +18,9 @@ public class Employee {
 		super();
 	}
 
-	
-	public Employee(int empId, String empName, Address empAdd) {
+	//Construction Injection	
+	@Autowired
+	public Employee(@Value("504")int empId, @Value("AVA")String empName, Address empAdd) {
 		super();
 		this.empId = empId;
 		this.empName = empName;
@@ -47,7 +49,8 @@ public class Employee {
 		return empAdd;
 	}
 
-	@Autowired
+//	Setter Injection
+//	@Autowired
 	public void setEmpAdd(Address empAdd) {
 		this.empAdd = empAdd;
 	}

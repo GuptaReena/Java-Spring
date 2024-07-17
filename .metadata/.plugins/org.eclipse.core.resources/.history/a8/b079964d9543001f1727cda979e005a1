@@ -1,0 +1,38 @@
+package oops;
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+
+
+public class Solution1 {
+    public static void main(String[] args) throws IOException {
+    	
+    	int n= "13";
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        String n = bufferedReader.readLine();
+        
+        BigInteger a = new BigInteger(n);
+        
+        for(int i =2 ; i <= Integer.parseInt(n) ; i++){
+        if(a.isProbablePrime(Integer.parseInt(n))){
+            
+            System.out.println("prime");
+            
+        }else{
+            System.out.println("not Prime");
+        }
+        }
+        bufferedReader.close();
+    }
+}

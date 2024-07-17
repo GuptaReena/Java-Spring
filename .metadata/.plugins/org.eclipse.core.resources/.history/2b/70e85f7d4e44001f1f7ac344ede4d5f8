@@ -1,0 +1,20 @@
+package oops;
+
+public class Bank {
+
+	
+		 
+		double getIntrest() {
+			
+			return 3.5;
+			
+		}
+	}
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

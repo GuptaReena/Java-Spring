@@ -27,16 +27,16 @@ public class Demo {
 		
 		
 		//	Field Injection	
-		Employee emp =  context.getBean("employee", Employee.class);
-		System.out.println("Field Injection :" + emp);
+//		Employee emp =  context.getBean("employee", Employee.class);
+//		System.out.println("Field Injection :" + emp);
 		
 		// Constructor Injection
-//		Employee emp1 =  context.getBean("employee", Employee.class);
-//		System.out.println("Constructor Injection :" + emp1);
+		Employee emp1 =  context.getBean("employee", Employee.class);
+		System.out.println("Constructor Injection :" + emp1);
 		
 		// Setter Injection
-		Employee emp3 =  context.getBean("employee", Employee.class);
-		System.out.println("Setter Injection :" + emp3);
+//		Employee emp3 =  context.getBean("employee", Employee.class);
+//		System.out.println("Setter Injection :" + emp3);
 		
 		
 	}
