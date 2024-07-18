@@ -1,0 +1,41 @@
+package compositionAggregation;
+
+class Engine{
+	private int horsePower;
+
+	public Engine(int horsePower) {
+		super();
+		this.horsePower = horsePower;
+	}
+	
+	
+	public String start() {
+		return "Engine with"  + horsePower  + "horsepower started";
+		
+	}
+}
+
+
+public class Car {
+	
+	private String make;
+	private String model;
+	private String engine;
+	
+	
+
+	public Car(String make, String model, String engine) {
+		super();
+		this.make = make;
+		this.model = model;
+		this.engine = new Engine(horsePower);
+	}
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

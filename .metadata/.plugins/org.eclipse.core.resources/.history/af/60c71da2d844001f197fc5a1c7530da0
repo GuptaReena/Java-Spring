@@ -1,0 +1,37 @@
+package generalizationspecialization;
+
+import oops.Cars;
+import oops.ToyataCar;
+import oops.Vehicle1;
+
+/*Generalization and specialization
+ * We can achieve this with the help of inheritance
+ * In that we can access the common method of a parent class in different  child class
+ * The method have IS A Relationship between them
+ * */
+
+
+public class GeneralizationSpecialization {
+	
+	public static void main(String args[]) {
+		
+		
+		
+		Vehicle1 veh = new Vehicle1("Cars");
+		System.out.println("Vehicle Name : " + veh.getName());
+		
+		
+		Vehicle1 veh1 = new Cars("Toyata");
+		System.out.println("Vehicle Name : " + veh1.getName() );
+		
+		Cars car = new Cars("Ford");
+		System.out.println("Car Name : " + car.getName());
+		
+		ToyataCar car1= new ToyataCar("Toyata");
+		car1.ToyataCarFeature();
+		
+	}
+	
+	
+
+}

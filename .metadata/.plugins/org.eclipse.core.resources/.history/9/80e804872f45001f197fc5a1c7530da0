@@ -1,0 +1,25 @@
+package fileoperations;
+
+import java.io.File;
+
+public class FileOperation {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// specify an abstract pathname in the File object 
+				File f = new File("D:\\Educative"); 
+
+				// check if the directory can be created 
+				// using the specified path name 
+				if (f.mkdir() == true) { 
+					System.out.println("Directory has been created successfully"); 
+				} 
+				else { 
+					System.out.println("Directory cannot be created"); 
+				} 
+		
+	}
+
+}

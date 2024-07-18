@@ -1,0 +1,145 @@
+package stringoperation;
+
+import java.util.Scanner;
+
+public class StringOperation {
+	
+	public static void stringConcat(Scanner sc ) {
+	
+		System.out.println("Enter First Name : " );
+		String firstName = sc.next();
+		System.out.println("Enter Last Name : ");
+		String lastName = sc.next();
+		
+		String result = firstName.concat(lastName);
+		
+		System.out.println("Concatenated string: " + result);
+	}
+	
+	public static void stringLength(Scanner sc) {
+		
+		System.out.println("Enter a Word : ");
+		String word = sc.nextLine();
+		
+		System.out.println("Length of String is :  " + word.length());
+	}
+	
+	public static void StringUpperCase(Scanner sc) {
+		System.out.println("Enter a String : ");
+		
+		String input = sc.next();
+		System.out.println("String Upper Case is : " + input.toUpperCase());
+		System.out.println("String Upper Case is : " + input.toLowerCase());
+	}
+	
+	public static void subString(Scanner sc ) {
+		System.out.println("Enter a String : ");
+		String substr = sc.nextLine();
+		System.out.println("Enter a StartIndex : ");
+		int startIndx = sc.nextInt();
+		System.out.println("Enter a EndIndex : ");
+		int endIndx = sc.nextInt();
+		
+		
+		String result  = substr.substring(startIndx, endIndx);
+		System.out.println("The SubString is : " + result);
+		
+	}
+	
+	public static void splitString(Scanner sc) {
+		 System.out.println("Enter a string : ");
+		 
+		 String splitInput = sc.nextLine();
+		 System.out.println("Enter a Delimiter : ");
+		 String delimiter = sc.nextLine();
+		 String[] parts = splitInput.split(delimiter);
+		 System.out.println("Split string is : " );
+		 for(String part : parts) {
+			System.out.println(part); 
+		 }
+	}
+	
+	public static void StringReverse(Scanner sc) {
+		System.out.println("Enter a String to Reverse : ");
+		
+		String reverse = sc.next();
+		String result = "";
+		
+		for(int i =0 ; i < reverse.length() ; i++) {
+			
+			result = reverse.charAt(i) + result;
+			
+			
+		}
+		
+		System.out.println("Reverse String is : " + result);
+	}
+	
+	
+	public static int getValidChoice(Scanner sc) {
+		
+		int choice = -1;
+		
+		while(true) {
+			try {
+				choice = Integer.parseInt(sc.nextLine());
+				if(choice >= 1 && choice <=8) {
+					break;
+					
+				}else {
+					System.out.println("Invalid choice. Please Enter number between 1 to 8 : ");
+				}
+			}catch(NumberFormatException e){
+				
+				System.out.println("Invalid input. Please enter a valid number: ");
+			}
+		}
+		return choice;
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		while(true) {
+//			displayMenu();
+			int choice = getValidChoice(scanner);
+			
+			switch(choice) {
+			
+			case 1 : stringConcat(scanner);
+			break;
+			
+			case 2 :
+					stringLength(scanner);
+				break;
+			case 3 :
+					StringUpperCase(scanner);
+				break;
+			case 4 : 
+					subString(scanner);
+				break;
+			case 5 : 
+				splitString(Scanner);
+				break;
+			case 6 :
+				break;
+			}
+			
+		}
+
+	}
+
+	private static int getInvalidChoice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

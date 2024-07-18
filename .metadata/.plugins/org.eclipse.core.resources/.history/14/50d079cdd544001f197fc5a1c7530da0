@@ -1,0 +1,9 @@
+package oops;
+
+public class Vehicle1 {
+
+	void getName() {
+		
+	}
+	
+}

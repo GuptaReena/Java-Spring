@@ -1,0 +1,41 @@
+package fileoperations;
+
+import java.io.File;
+import java.util.Scanner;
+
+public class FileOperation {
+	
+	public static void createDirectory(Scanner sc) {
+		
+		System.out.println("Enter a path where you want to create folder: ");
+		String path =sc.next();
+		
+		System.out.println("Enter the name of the directory :");
+		path = path + sc.next();
+		
+		File f1 = new File(path);
+		
+		boolean bool = f1.mkdir();
+		
+		if(bool) {
+			System.out.println("Folder is created sucessfull");
+		}else {
+			System.out.println("Error found");
+		}
+		
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		Scanner scanner = new Scanner;
+		
+		FileOperation file = new FileOperation();
+		file.createDirectory(scanner);
+		
+		
+	}
+
+}

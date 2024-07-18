@@ -1,0 +1,34 @@
+package stringoperation;
+
+import java.util.Scanner;
+
+public class StringOperation {
+	
+	
+
+	public String stringConcat(String lastName ) {
+	
+		return concat(lastName);
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		StringOperation str = new StringOperation();
+		
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter First Name : " );
+		String s = sc.next();
+		System.out.println("Enter Last Name : ");
+		String s1 = sc.next();
+		System.out.println("Concate String is :" + s1 +  str.stringConcat(s1));
+		
+
+	}
+
+}

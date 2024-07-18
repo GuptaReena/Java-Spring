@@ -1,0 +1,15 @@
+package oops;
+
+
+
+public class GeneralizationSpecialization {
+	
+	public static void main(String args[]) {
+		
+		Vehicle1 veh = new Vehicle1("Cars");
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,22 @@
+package compositionAggregation;
+
+class Engine{
+	private int horsePower;
+
+	public Engine(int horsePower) {
+		super();
+		this.horsePower = horsePower;
+	}
+	
+	
+}
+
+
+public class Car {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

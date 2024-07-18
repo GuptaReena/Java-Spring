@@ -1,0 +1,240 @@
+package fileoperations;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class FileOperation {
+	
+	public static void createDirectory(Scanner sc) {
+		
+		System.out.println("Enter a path where you want to create folder: ");
+		String path =sc.next();
+		
+		System.out.println("Enter the name of the directory :");
+		path = path + sc.next();
+		
+		File f1 = new File(path);
+		
+		boolean bool = f1.mkdir();
+		
+		if(bool) {
+			System.out.println("Folder is created sucessfull");
+		}else {
+			System.out.println("Error found");
+		}
+		
+	}
+	
+	public static void createFile(Scanner sc)  {
+		
+		System.out.println("Enter a path where you want to create folder: ");
+		String path =sc.next();
+		
+		System.out.println("Enter the file name to create :");
+		String fileName = sc.next();
+		File file = new File(fileName);
+		
+		
+		try {
+			
+			if(file.createNewFile()) {
+				System.out.println("File created " + fileName);
+			}else {
+				System.out.println("File already exists " + fileName);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+}
+	
+	public static void writeFile(Scanner scanner) {
+        System.out.print("Enter the file name to write to: ");
+        String fileName = scanner.nextLine();
+        System.out.println("Enter the content to write (type 'END' on a new line to finish):");
+        StringBuilder content = new StringBuilder();
+        while (true) {
+            String line = scanner.nextLine();
+            if ("END".equalsIgnoreCase(line)) {
+                break;
+            }
+            content.append(line).append(System.lineSeparator());
+        }
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            writer.write(content.toString());
+            System.out.println("Successfully wrote to the file: " + fileName);
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing to the file.");
+            e.printStackTrace();
+        }
+    }
+	
+	private static void readFile(Scanner scanner) {
+        System.out.print("Enter the file name to read from: ");
+        String fileName = scanner.nextLine();
+        File file = new File(fileName);
+        if (file.exists()) {
+            try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    System.out.println(line);
+                }
+            } catch (IOException e) {
+                System.out.println("An error occurred while reading the file.");
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("The file does not exist: " + fileName);
+        }
+    }
+
+	
+	private static void appendFile(Scanner scanner) {
+        System.out.print("Enter the file name to append to: ");
+        String fileName = scanner.nextLine();
+        System.out.println("Enter the content to append (type 'END' on a new line to finish):");
+        StringBuilder content = new StringBuilder();
+        while (true) {
+            String line = scanner.nextLine();
+            if ("END".equalsIgnoreCase(line)) {
+                break;
+            }
+            content.append(line).append(System.lineSeparator());
+        }
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
+            writer.write(content.toString());
+            System.out.println("Successfully appended to the file: " + fileName);
+        } catch (IOException e) {
+            System.out.println("An error occurred while appending to the file.");
+            e.printStackTrace();
+        }
+    }
+	
+	
+	public static void deleteFile(Scanner scanner) {
+        System.out.print("Enter the file name to delete: ");
+        String fileName = scanner.nextLine();
+        File file = new File(fileName);
+        if (file.delete()) {
+        	
+            System.out.println("Deleted the file: " + fileName);
+        } else {
+            System.out.println("Failed to delete the file. It may not exist.");
+        }
+    }
+	
+	
+	private static void listFilesInDirectory(Scanner scanner) {
+        System.out.print("Enter the directory path: ");
+        String directoryPath = scanner.nextLine();
+        File directory = new File(directoryPath);
+        if (directory.isDirectory()) {
+            String[] fileList = directory.list();
+            System.out.println("Files in directory:");
+            if (fileList != null) {
+                for (String fileName : fileList) {
+                    System.out.println(fileName);
+                }
+            } else {
+                System.out.println("The directory is empty or an error occurred.");
+            }
+        } else {
+            System.out.println("The path is not a directory.");
+        }
+    }
+	
+	 public static void checkFileProperties(Scanner scanner) {
+	        System.out.print("Enter the file name (with path): ");
+	        String fileName = scanner.nextLine();
+	        File file = new File(fileName);
+	        if (file.exists()) {
+	            System.out.println("File name: " + file.getName());
+	            System.out.println("File size in bytes: " + file.length());
+	            System.out.println("File last modified time :" + file.lastModified());
+	        } else {
+	            System.out.println("The file does not exist.");
+	        }
+	    }
+	
+	public static int getValidChoice(Scanner sc) {
+		
+		int choice = -1;
+		
+		while(true) {
+			try {
+				choice = Integer.parseInt(sc.nextLine());
+				if(choice >= 1 && choice <= 8) {
+					break;
+					
+				}else {
+					System.out.println("Invalid choice. Please Enter number between 1 to 8 : ");
+				}
+			}catch(NumberFormatException e){
+				
+				System.out.println("Invalid input. Please enter a valid number: ");
+			}
+		}
+		return choice;
+	}
+	
+	private static void copyFile(Scanner scanner) {
+        System.out.print("Enter the source file name: ");
+        String sourceFileName = scanner.nextLine();
+        System.out.print("Enter the destination file name: ");
+        String destinationFileName = scanner.nextLine();
+
+        File sourceFile = new File(sourceFileName);
+        File destinationFile = new File(destinationFileName);
+
+        if (!sourceFile.exists()) {
+            System.out.println("The source file does not exist: " + sourceFileName);
+            return;
+        }
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(sourceFileName));
+             BufferedWriter writer = new BufferedWriter(new FileWriter(destinationFileName))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                writer.write(line);
+                writer.newLine();
+            }
+            System.out.println("Content copied from " + sourceFileName + " to " + destinationFileName);
+        } catch (IOException e) {
+            System.out.println("An error occurred while copying the file.");
+            e.printStackTrace();
+        }
+    }
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		FileOperation file = new FileOperation();
+		
+		
+//		file.createDirectory(scanner);
+		
+		
+		//	file.createFile(scanner);
+		//file.writeFile(scanner);
+		
+		//file.readFile(scanner);
+		//file.appendFile(scanner);
+		
+//		file.deleteFile(scanner);
+		
+//		file.listFilesInDirectory(scanner);
+		file.checkFileProperties(scanner);
+	}
+
+}
